@@ -1,28 +1,28 @@
-1 REM
-2 REM
-3 REM
-4 REM
-5 REM
-6 REM
-7 REM
-8 REM
-9 REM
-10 REM
-11 REM
-12 REM
-14 REM
+1 REM           ***************************************
+2 REM           *                                     *
+3 REM           *      GRAPHIC ARTS                   *
+4 REM           *         RESEARCH FOUNDATION         *
+5 REM           *                                     *
+6 REM           *      'GRIDMASTER' PROGRAM           *
+7 REM           *        BY BRUCE ROSENBLUM           *
+8 REM           *                                     *
+9 REM           *      COPYRIGHT 1981                 *
+10 REM          *                                     *
+11 REM          *      LAST REVISED 8/3/81            *
+12 REM          *                                     *
+14 REM          ***************************************
 15 REM
 16 CLEAR : RESTORE : SCALE= 1: ROT= 0
 20 A = 65:B = 5
-30 B$ = CHR$ (08)
-40  DATA 2, 0, 6, 0, 16, 0, 18, 63, 32, 100, 45, 21, 54, 30, 7, 0, 210, 237, 45, 0
+30 B$ =  CHR$ (08)
+40  DATA  2,0,6,0,16,0,18,63,32,100,45,21,54,30,7,0,210,237,45,0
 50  FOR X = 1 TO 20: READ Y
 60  POKE (7675 + X),Y: NEXT X
 70  POKE 115,252: POKE 116,29: POKE 232,252: POKE 233,29
+80
 90 D = 7:E = 1
 100  DIM CC(22)
 110  HOME
-115 DIM T(256)
 120 LI = 0
 130  TEXT
 140  PRINT "ADD NEW IDEO, EDIT OLD, OR END"
@@ -132,8 +132,8 @@
 1130  RESTORE : FOR X = 1 TO 20
 1140  READ Y: NEXT X
 1150  DATA 169,64,160,32,32,217,3,96,0
-1160  DATA 1, 96, 1, 0, 0, 0, 64, 64, 0, 65, 0, 0, 0, 0, 0, 96, 1
-1170  DATA 0, 1, 239, 216
+1160  DATA 1,96,1,0,0,0,64,64,0,65,0,0,0,0,0,96,1
+1170  DATA 0,1,239,216
 1180  FOR X = 1 TO 9: READ Y
 1190  POKE (16383 + X), Y: NEXT X
 1200  FOR X = 1 TO 17: READ Y
@@ -167,7 +167,7 @@
 1480  POKE 16428,2
 1490  CALL 16384
 1500  TEXT : HOME
-1510  GOTO 16
+1510  GOTO 10
 1520  POP
 1530  PRINT "DO YOU WANT TO START AGAIN";: INPUT Q$
 1540 A = 65:B = 5:D = 7:E = 1
